@@ -1,0 +1,45 @@
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários Cadastrados</title>
+    <link rel="stylesheet" href="/static/css/clientescadastro.css">
+
+
+    </head>
+
+    <body>
+
+    <div class="container">
+
+        <h1>Produtos Cadastrados</h1>
+    <div class="listar_usuarios">       
+
+        {% if produtos%}
+            {% for produto in produtos %}
+                <div class="produto">
+                    <h2>{{ produto[1] }}</h2>
+                    <p><strong>Preço:</strong> R$ {{ produto[2] }}</p>
+                    <p><strong>Quantidade:</strong> {{ produto[3] }}</p>
+                    <p><strong>Categoria:</strong> {{ produto[4] }}</p>
+                <div class="actions">
+                    <a href="/delete/{{ produto[0] }}" 
+                    onclick="return confirm('Tem certeza que deseja excluir este produto?')">
+                    Excluir</a>
+                </div>
+                <div class="actions">
+                    <a href="/" 
+                    >
+                    Voltar</a>
+                </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Nenhum produto cadastrado.</p>
+        {% endif %}
+
+    </div>
+
+    </body>
+    </html>
