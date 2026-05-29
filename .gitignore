@@ -1,0 +1,23 @@
+# Ambiente virtual
+venv/
+.env/
+
+# Variáveis sensíveis
+.env
+
+# Cache Python
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# Banco SQLite
+*.db
+
+# Logs
+*.log
+
+# Arquivos do sistema Linux
+*.swp
+.gitattributes
